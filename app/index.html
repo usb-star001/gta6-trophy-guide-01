@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-title">
+    <h1>Leonida Platinum</h1>
+    <p class="subtitle">The GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze. 28 are hidden on PlayStation until earned.</p>
+  </div>
+  <div class="progress-block" id="progressBlock">
+    <div class="progress-count"><span id="earnedCount">0</span><span class="progress-total"> / 55 earned</span></div>
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-sub" id="progressSub">0% — platinum still to come</div>
+  </div>
+</header>
+<nav class="view-tabs" aria-label="Views">
+  <a href="#/checklist" data-view="checklist" class="view-tab">Checklist</a>
+  <a href="#/roadmap" data-view="roadmap" class="view-tab">Roadmap to Platinum</a>
+  <a href="#/missables" data-view="missables" class="view-tab">Missables <span class="tab-badge" id="missableCount">6</span></a>
+  <a href="#/settings" data-view="settings" class="view-tab">Spoilers &amp; Save</a>
+</nav>
+<section class="toolbar" aria-label="Filters and save controls">
+  <label class="tool">Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label class="tool">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="tool search-tool">Search
+    <input id="searchBox" type="search" placeholder="Name, mission or word…" autocomplete="off">
+  </label>
+  <label class="tool spoiler-tool"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <button id="exportBtn" type="button" class="btn">Export progress</button>
+  <label class="btn import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+</section>
+<main>
+  <section id="view-checklist" class="view">
+    <div class="checklist-layout">
+      <div class="list-pane">
+        <p class="list-note" id="listNote">Tick a trophy when you earn it — progress saves in this browser.</p>
+        <ul class="trophy-list" id="trophyList"></ul>
+      </div>
+      <aside class="detail-pane" id="detailPane" aria-live="polite"></aside>
+    </div>
+  </section>
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="view-intro">Built from the official descriptions only: the order below follows the story chapters and missions first, then the stranger strands, then collectibles and exploration, then the activity grinds, and finally the 100% clean-up that unlocks the gold for full completion and the platinum itself. No step here claims a location the official list does not pin down.</p>
+    <ol class="roadmap-stages" id="roadmapStages"></ol>
+  </section>
+  <section id="view-missables" class="view" hidden>
+    <h2>Missable trophies — do these before they pass</h2>
+    <p class="view-intro">Story missions in GTA games can be replayed, so chapter and mission trophies are <strong>not</strong> missable. The seven below are flagged missable because their official descriptions describe a one-off moment, a choice, or a run that must be done in one go — miss the moment and it may not come back. Each flag says why, from the description itself.</p>
+    <ul class="trophy-list missable-list" id="missableList"></ul>
+  </section>
+  <section id="view-settings" class="view" hidden>
+    <h2>Spoilers &amp; save</h2>
+    <div class="settings-grid">
+      <div class="settings-card">
+        <h3>Spoiler setting</h3>
+        <p>With <strong>Hide story spoilers</strong> on, story trophies you have not earned yet show as “Hidden story trophy” — their names and descriptions stay hidden until you tick them earned. Collectibles, activities and the platinum are never hidden. The setting is saved in this browser.</p>
+        <label class="tool"><input id="spoilerToggle2" type="checkbox"> Hide story spoilers</label>
+      </div>
+      <div class="settings-card">
+        <h3>Your progress</h3>
+        <p id="settingsProgress">0 of 55 trophies earned.</p>
+        <p><button id="exportBtn2" type="button" class="btn">Export progress (.json)</button></p>
+        <p><label class="btn import-btn">Import progress <input id="importFile2" type="file" accept="application/json,.json"></label></p>
+        <p class="fineprint">Export downloads a small file with the names of the trophies you have ticked. Import reads that file back and restores your ticks. Nothing leaves your browser — there is no account and no server.</p>
+      </div>
+      <div class="settings-card">
+        <h3>About the sources</h3>
+        <p>Names, descriptions and grades are the official PlayStation 5 list as Exophase and PSNProfiles listed it (the two agree on every name, description and grade). PSN counts — such as 42 Shooting Range challenges — come from PSNProfiles. Every guide is written in our own words from the official description; where a place or step is not pinned down by a source we have checked, the guide says so plainly instead of inventing one.</p>
+        <p class="fineprint">No online trophies: the official list has no online trophy, so the Online filter is empty by design. This guide is unofficial, works fully offline, and uses no Rockstar logo or official artwork.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Leonida Platinum — an unofficial, offline GTA VI trophy guide &amp; tracker. Names, descriptions and grades: the official PS5 list (Exophase / PSNProfiles). Guides: our own words, from the official descriptions.</p>
+</footer>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
